@@ -89,3 +89,29 @@ p {
   font-size: 14px;
   color: var(--card-bottom-converted-card-text-color)
 }
+
+#light-dark-mode-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background: var(--card-bottom-bg-color);
+  height: 20px;
+}
+
+#light-dark-mode-btn {
+  background: none;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  margin: 0px 0px 0px 0px;
+}
+
+#light-dark-mode-btn:hover {
+  transition: 0.5s;
+  font-size: 24px;
+}
+
+#light-dark-mode-btn:not(:hover) {
+  transition: 0.5s;
+  font-size: 20px;
+}
