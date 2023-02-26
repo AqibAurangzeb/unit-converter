@@ -1,11 +1,9 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
-
-// const cardBottom = document.getElementById("card-bottom");
 const lightDarkModeBtn = document.getElementById("light-dark-mode-btn");
+const cardTopInput = document.getElementById("card-top-input");
+const cardTopConvertBtn = document.getElementById("card-top-convert-btn");
+const lengthEl = document.getElementById("length-el");
+const volumeEl = document.getElementById("volume-el");
+const massEl = document.getElementById("mass-el");
 
 const mode = localStorage.getItem("darkMode");
 
@@ -41,3 +39,17 @@ function setColorsForLightMode() {
   document.documentElement.style.setProperty('--card-bottom-converted-card-title-color', '#5A537B');
   document.documentElement.style.setProperty('--card-bottom-converted-card-text-color', '#353535'); 
 }
+
+cardTopConvertBtn.addEventListener("click", function() {
+  const unitValue = cardTopInput.value;
+  const metersToFeet = unitValue * 3.28084;
+  const feetToMeters = unitValue * 0.3048;
+  const litresToGallons = unitValue * 0.264172;
+  const gallonsToLitres = unitValue * 3.78541;
+  const kilosToPounds = unitValue * 2.20462;
+  const poundsToKilos = unitValue * 0.453592;
+
+  lengthEl.textContent = `${unitValue} meters = ${metersToFeet.toFixed(3)} feet | ${unitValue} feet = ${feetToMeters.toFixed(3)} meters`;
+  volumeEl.textContent = `${unitValue} liters = ${litresToGallons.toFixed(3)} gallons | ${unitValue} gallons = ${gallonsToLitres.toFixed(3)} liters`;
+  massEl.textContent = `${unitValue} kilos = ${kilosToPounds.toFixed(3)} pounds | ${unitValue} pounds = ${poundsToKilos.toFixed(3)} kilos`;
+})

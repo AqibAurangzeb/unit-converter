@@ -72,7 +72,7 @@ body {
   background: var(--card-bottom-bg-color);
 }
 
-#card-bottom-converted-card {
+.card-bottom-converted-card {
   width: 500px;
   height: 110px;
   background: var(--card-bottom-converted-card-bg-color);
@@ -114,4 +114,16 @@ p {
 #light-dark-mode-btn:not(:hover) {
   transition: 0.5s;
   font-size: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
