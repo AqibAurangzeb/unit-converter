@@ -52,4 +52,6 @@ cardTopConvertBtn.addEventListener("click", function() {
   lengthEl.textContent = `${unitValue} meters = ${metersToFeet.toFixed(3)} feet | ${unitValue} feet = ${feetToMeters.toFixed(3)} meters`;
   volumeEl.textContent = `${unitValue} liters = ${litresToGallons.toFixed(3)} gallons | ${unitValue} gallons = ${gallonsToLitres.toFixed(3)} liters`;
   massEl.textContent = `${unitValue} kilos = ${kilosToPounds.toFixed(3)} pounds | ${unitValue} pounds = ${poundsToKilos.toFixed(3)} kilos`;
+
+  cardTopInput.value = "";
 })
